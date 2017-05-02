@@ -4,17 +4,34 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { RealmsComponent } from './realms/realms.component';
+
+import { AppRoutingModule } from './app-routing.module';
+import { CountriesComponent } from './countries/countries.component';
+import { UsersComponent } from './users/users.component';
+
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+
+import { RealmService } from './realms/realm.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeComponent,
+    RealmsComponent,
+    CountriesComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [RealmService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
