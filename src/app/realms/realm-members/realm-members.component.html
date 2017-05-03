@@ -1,0 +1,16 @@
+<div *ngIf='realm'>
+  <h2>{{realm.name}} details!</h2>
+  <div>
+    <label>Realm id: </label>{{realm.id}}
+  </div>
+
+  <ol >
+    <li *ngFor="let member of realmMembers">
+      {{member.name}} <label>, Realm Id: </label> {{realm.id}}
+
+    </li>
+  </ol>
+
+
+
+</div>

@@ -5,13 +5,16 @@ import { RealmsComponent } from './realms/realms.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CountriesComponent } from './countries/countries.component';
 import { UsersComponent } from './users/users.component';
+import { RealmMembersComponent } from "./realms/realm-members/realm-members.component";
 
 const routes: Routes = [
   {  path: '',  redirectTo: '/welcome',  pathMatch: 'full'},
   {  path: 'welcome',  component: WelcomeComponent},
   {  path: 'countries',  component: CountriesComponent  },
-  {  path: 'realms',  component: RealmsComponent  },
+  {  path: 'realms',  component: RealmsComponent },
   {  path: 'users',  component: UsersComponent  },
+  {  path: 'realmMembers/:id',  component: RealmMembersComponent  },
+
 ]
 
 @NgModule({

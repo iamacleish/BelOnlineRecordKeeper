@@ -17,11 +17,12 @@ export class InMemoryDataService implements InMemoryDbService{
         id: 2,
         name: 'Canada',
         realms: [{
-          id: 1,
-          name: 'Thunder People'},
+            id: 4,
+            name: 'Underull'
+          },
           {
-          id: 2,
-           name: 'Hipster Bay',
+            id: 5,
+            name: 'Fishmen'
           }]
       }
     ]
@@ -29,35 +30,11 @@ export class InMemoryDataService implements InMemoryDbService{
     let realms = [
       {
         id: 1,
-        name: 'Scarfland',
-        realmMembers: [
-          {
-            id:1,
-            name:'Torix'
-          },
-          {
-            id:2,
-            name:'Derian'
-          }
-        ]
+        name: 'Scarfland'
       },
       {
         id: 2,
-         name: 'Nermaner',
-         realmMembers: [
-           {
-             id:1,
-             name:'Kegg'
-           },
-           {
-             id:2,
-             name:'Pookie'
-           },
-           {
-             id:3,
-             name:'Himmel'
-           }
-         ]
+         name: 'Nermaner'
       },
       {
         id: 3,
@@ -92,6 +69,29 @@ export class InMemoryDataService implements InMemoryDbService{
          name: 'Tornado Town'
       }
     ];
-    return {realms, countries};
+    let users = [
+        {
+          realm_id:1,
+          name:'Torix'
+        },
+        {
+          realm_id:1,
+          name:'Derian'
+        },
+        {
+          realm_id:2,
+          name:'Kegg'
+        },
+        {
+          realm_id:2,
+          name:'Torry'
+        },
+        {
+          realm_id:2,
+          name:'Himmel'
+        }
+    ]
+
+    return {users, realms, countries};
   }
 }

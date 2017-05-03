@@ -1,17 +1,10 @@
 <div class="container">
   realms works!
 </div>
+
 <ol>
-  <li *ngFor="let realm of realms">
+  <li *ngFor="let realm of realms" (click)="gotoDetail(realm)">
     {{realm.name}}
-
-
-    <ul>
-      <li *ngFor="let member of realm.realmMembers">
-        <span>id: </span>{{member.id}}
-        <span>, name: </span>{{member.name}}
-      </li>
-    </ul>
 
   </li>
 </ol>

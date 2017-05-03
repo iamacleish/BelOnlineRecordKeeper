@@ -15,6 +15,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import { RealmService } from './realms/realm.service';
+import { RealmMembersComponent } from './realms/realm-members/realm-members.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { RealmService } from './realms/realm.service';
     RealmsComponent,
     CountriesComponent,
     UsersComponent,
+    RealmMembersComponent,
   ],
   imports: [
     BrowserModule,

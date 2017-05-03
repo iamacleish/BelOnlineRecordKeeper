@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { Realm } from '../realm';
 import { RealmService } from './realm.service';
+import { RealmMembersComponent } from  "./realm-members/realm-members.component";
 
 @Component({
   selector: 'app-realms',
@@ -26,5 +27,11 @@ export class RealmsComponent implements OnInit {
   getRealms(): void {
     this.realmService.getRealms().then(realms => this.realms = realms);
   }
+
+  gotoDetail(realm: Realm): void {
+
+    let link = ['/realmMembers', realm.id];
+    this.router.navigate(link);
+}
 
 }

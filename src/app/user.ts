@@ -1,4 +1,4 @@
 export class User {
-  id: number;
+  realm_id: number;
   name: string;
 }
